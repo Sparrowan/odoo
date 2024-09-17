@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <record id="view_hospital_patient_tree" model="ir.ui.view">
-        <field name="name">hospital.patient.tree</field>
+    <record id="view_hospital_patient_readonly_tree" model="ir.ui.view">
+        <field name="name">hospital.patient.readonly.tree</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <tree string="Patients">
@@ -13,8 +13,8 @@
         </field>
     </record>
 
-    <record id="view_hospital_patient_form" model="ir.ui.view">
-        <field name="name">hospital.patient.form</field>
+    <record id="view_hospital_patient_readonly_form" model="ir.ui.view">
+        <field name="name">hospital.patient.readonly.form</field>
         <field name="model">hospital.patient</field>
         <field name="arch" type="xml">
             <form string="Patients">
@@ -37,8 +37,8 @@
         </field>
     </record>
 
-    <record id="action_hospital_patient" model="ir.actions.act_window">
-        <field name="name">Patients</field>
+    <record id="action_hospital_readonly_patient" model="ir.actions.act_window">
+        <field name="name">View Patients</field>
         <field name="res_model">hospital.patient</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
