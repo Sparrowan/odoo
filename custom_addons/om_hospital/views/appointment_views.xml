@@ -20,11 +20,16 @@
         <field name="arch" type="xml">
             <form string="Appointments">
                 <header>
-                    <button name="action_confirm" type="object" string="Confirm" />
-                    <button name="action_ongoing" type="object" string="Ongoing" />
-                    <button name="action_done" type="object" string="Done" />
-                    <button name="action_cancelled" type="object" string="Cancelled" />
-                    <field name="status" widget="statusbar" />
+                    <button name="action_confirm" type="object" string="Confirm"
+                        invisible="status != 'draft'" class="oe_highlight"/>
+                    <button name="action_ongoing" type="object" string="Ongoing"
+                        invisible="status != 'confirmed'" class="oe_highlight"/>
+                    <button name="action_done" type="object" string="Done"
+                        invisible="status != 'ongoing'" class="oe_highlight"/>
+                    <button name="action_cancelled" type="object" string="Cancel"
+                        invisible="status == 'done'" />
+                    <field name="status" widget="statusbar"
+                        statusbar_visible="draft,confirmed,ongoing,done" />
                 </header>
                 <sheet>
                     <group>
