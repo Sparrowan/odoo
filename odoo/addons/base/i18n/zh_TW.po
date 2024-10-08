@@ -2103,6 +2103,8 @@ msgid ""
 "\n"
 "Add support to fill three optional fields used when using Chorus Pro, especially when invoicing public services.\n"
 msgstr ""
+"\n"
+"加入功能支援，在使用 Chorus Pro 時，填寫三個使用的可選填欄位，特別是為公共服務開立發票時。\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_documents_project
@@ -4238,12 +4240,8 @@ msgid ""
 "=========================================================================================\n"
 "\n"
 "German accounting chart and localization.\n"
+"By default, the audit trail is enabled for GoBD compliance.\n"
 msgstr ""
-"\n"
-"Dieses  Modul beinhaltet einen deutschen Kontenrahmen basierend auf dem SKR03 oder SKR04.\n"
-"=========================================================================================\n"
-"\n"
-"德國會計賬目總表及本地化。\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_disallowed_expenses
@@ -11029,7 +11027,7 @@ msgid ""
 "This module integrates with the Kenyan G03 Tremol control unit device to the KRA through TIMS.\n"
 msgstr ""
 "\n"
-"該模塊與肯尼亞 G03 Tremol 控制單元設備集成，通過 TIMS 連接到 KRA。\n"
+"此模組與肯亞 G03 Tremol 控制單元裝置整合，透過 TIMS 連接到 KRA。\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ke_edi_oscu
@@ -19699,7 +19697,7 @@ msgstr "文件管理 - 香港薪酬"
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_l10n_ke_hr_payroll
 msgid "Documents - Kenyan Payroll"
-msgstr "文件 - 肯尼亞工資單"
+msgstr "文件管理 - 肯亞工資單"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_documents_hr_payroll
@@ -20223,7 +20221,7 @@ msgstr "啟用分析一段時間"
 #. module: base
 #: model:ir.model.fields,field_description:base.field_base_enable_profiling_wizard__expiration
 msgid "Enable profiling until"
-msgstr "啟用分析直到"
+msgstr "啟用分析直至"
 
 #. module: base
 #: model:ir.module.module,description:base.module_appointment_sms
@@ -26865,7 +26863,7 @@ msgstr "月"
 #: model:ir.model.fields.selection,name:base.selection__res_company__font__montserrat
 #: model:res.country,name:base.ms
 msgid "Montserrat"
-msgstr "蒙特塞拉特"
+msgstr "Montserrat"
 
 #. module: base
 #: model:res.country,name:base.ma
@@ -38457,7 +38455,7 @@ msgstr "使用者:"
 #: model:ir.model.fields,field_description:base.field_ir_mail_server__smtp_user
 #: model:ir.model.fields.selection,name:base.selection__ir_mail_server__smtp_authentication__login
 msgid "Username"
-msgstr "使用者名"
+msgstr "使用者名稱"
 
 #. module: base
 #. odoo-python

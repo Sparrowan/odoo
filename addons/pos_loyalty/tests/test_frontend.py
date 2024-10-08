@@ -434,7 +434,7 @@ class TestUi(TestPointOfSaleHttpCommon):
         aaa_loyalty_card = loyalty_program.coupon_ids.filtered(lambda coupon: coupon.partner_id.id == partner_aaa.id)
 
         self.assertEqual(loyalty_program.pos_order_count, 1)
-        self.assertAlmostEqual(aaa_loyalty_card.points, 0.2)
+        self.assertAlmostEqual(aaa_loyalty_card.points, 5.2)
 
     def test_pos_loyalty_tour_max_amount(self):
         """Test the loyalty program with a maximum amount and product with different taxe."""
@@ -2213,6 +2213,16 @@ class TestUi(TestPointOfSaleHttpCommon):
         )
 
     def test_cheapest_product_reward_pos_combo(self):
+        self.env['product.product'].create({
+            "name": "Expensive product",
+            "lst_price": 1000,
+            "available_in_pos": True,
+        })
+        self.env['product.product'].create({
+            "name": "Cheap product",
+            "lst_price": 1,
+            "available_in_pos": True,
+        })
         setup_pos_combo_items(self)
         self.office_combo.write({'lst_price': 50})
         self.env['loyalty.program'].search([]).write({'active': False})

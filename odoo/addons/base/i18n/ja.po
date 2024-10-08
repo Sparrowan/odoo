@@ -5,9 +5,9 @@
 # Translators:
 # Andy Yiu, 2024
 # Ryoko Tsuda <ryoko@quartile.co>, 2024
-# Yoshi Tashiro (Quartile) <tashiro@roomsfor.hk>, 2024
 # Martin Trigaux, 2024
 # Wil Odoo, 2024
+# Yoshi Tashiro (Quartile) <tashiro@roomsfor.hk>, 2024
 # Junko Augias, 2024
 # 
 msgid ""
@@ -1076,6 +1076,9 @@ msgid ""
 "Accounting Asset for India\n"
 "================================\n"
 msgstr ""
+"\n"
+"インドの会計資産\n"
+"================================\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_au_hr_payroll_account
@@ -1360,6 +1363,8 @@ msgid ""
 "\n"
 "Accounting reports for Bangladesh\n"
 msgstr ""
+"\n"
+"バングラデシュ用会計レポート\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_reports
@@ -1599,7 +1604,7 @@ msgstr ""
 "ルクセンブルグの会計レポート\n"
 "=================================\n"
 "ルクセンブルグの SAF-T (FAIAとしても知られる)は XML形式を使用してさまざまなタイプの会計取引データをエクスポートするための標準ファイル形式です。\n"
-"SAF-T Financialの最初のバージョンは、顧客およびサプライヤの取引を含む総勘定元帳レベルに制限されています。 必要なマスタデータも含まれています。 \n"
+"SAF-T Financialの最初のバージョンは、顧客および仕入先の取引を含む総勘定元帳レベルに制限されています。 必要なマスタデータも含まれています。 \n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_ma_reports
@@ -2106,6 +2111,8 @@ msgid ""
 "\n"
 "Add support to fill three optional fields used when using Chorus Pro, especially when invoicing public services.\n"
 msgstr ""
+"\n"
+"Chorus Proを使用する際、特に公共サービスの顧客請求書を発行する際に使用される3つのオプションフィールドに入力するためのサポートを追加しました。\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_documents_project
@@ -4212,12 +4219,8 @@ msgid ""
 "=========================================================================================\n"
 "\n"
 "German accounting chart and localization.\n"
+"By default, the audit trail is enabled for GoBD compliance.\n"
 msgstr ""
-"\n"
-"Dieses  Modul beinhaltet einen deutschen Kontenrahmen basierend auf dem SKR03 oder SKR04.\n"
-"=========================================================================================\n"
-"\n"
-"ドイツ勘定科目とローカリゼーション\n"
 
 #. module: base
 #: model:ir.module.module,description:base.module_l10n_be_disallowed_expenses
@@ -6193,7 +6196,7 @@ msgstr ""
 "\n"
 "リトアニアSAF-Tは、XML形式を使用してさまざまなタイプの会計トランザクションデータをエクスポートするための標準ファイル形式です。\n"
 "使用されているXSDのバージョンはv2.01(2019年以降)です。リトアニア当局で使用されている最新のものです。\n"
-"SAF-T Financialの最初のバージョンは、顧客やサプライヤとの取引を含む総勘定元帳レベルに限定されています。\n"
+"SAF-T Financialの最初のバージョンは、顧客や仕入先との取引を含む総勘定元帳レベルに限定されています。\n"
 " 必要なマスタデータも含まれています。\n"
 
 #. module: base
@@ -19478,11 +19481,12 @@ msgid ""
 "%(country_code)s: the code of the country"
 msgstr ""
 "この国に属する住所に使用する表示形式。\n"
-"アドレスのすべてのフィールドでpythonスタイルの文字列パターンを使用できます(たとえば、'%(street)s'を使用してフィールド'street'を表示します)\n"
-"%(state_name)s:州の名前\n"
-"%(state_code )s:州のコード\n"
-"%(country_name)s:国の名前\n"
-"%(country_code)s:国のコード"
+"\n"
+"アドレスのすべてのフィールドでpythonスタイルの文字列パターンを使用できます(たとえば、'%(street)s' を使用してフィールド '町名番地' を表示します)\n"
+"%(state_name)s:州/都道府県の名前\n"
+"%(state_code)s:州/都道府県のコード\n"
+"%(country_name)s:国名\n"
+"%(country_code)s:国コード"
 
 #. module: base
 #. odoo-python
@@ -21661,7 +21665,7 @@ msgstr "ここから、あなたと連絡先にリンクされている全ての
 #. module: base
 #: model:ir.module.module,summary:base.module_sale_management
 msgid "From quotations to invoices"
-msgstr "見積もりから請求書まで"
+msgstr "見積から請求書まで"
 
 #. module: base
 #: model:ir.module.category,name:base.module_category_human_resources_frontdesk
@@ -25455,17 +25459,17 @@ msgstr "保守担当者"
 #: model:ir.module.category,name:base.module_category_manufacturing_maintenance
 #: model:ir.module.module,shortdesc:base.module_maintenance
 msgid "Maintenance"
-msgstr "メンテナンス"
+msgstr "整備"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_hr_maintenance
 msgid "Maintenance - HR"
-msgstr "管理 - HR"
+msgstr "整備 - HR"
 
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_mrp_maintenance
 msgid "Maintenance - MRP"
-msgstr "保守 - MRP"
+msgstr "整備 - MRP"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_voip
@@ -29276,7 +29280,7 @@ msgstr "Odooは生成されたPDFをマージできません。"
 msgid ""
 "Odoo is unable to merge the generated PDFs because of {num_errors} corrupted"
 " file(s)"
-msgstr ""
+msgstr "破損したファイル {num_errors} があるため、Odooは生成されたPDFをマージできません。"
 
 #. module: base
 #: model:ir.model.fields,help:base.field_ir_sequence__padding
@@ -38424,7 +38428,7 @@ msgstr "リードのWebチャットセッションを表示する"
 #. odoo-python
 #: code:addons/base/models/ir_actions_report.py:0
 msgid "View Problematic Record(s)"
-msgstr ""
+msgstr "問題のあるレコードを表示"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.action_ui_view

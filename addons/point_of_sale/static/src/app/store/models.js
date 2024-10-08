@@ -1126,6 +1126,14 @@ export class Orderline extends PosModel {
     isPartOfCombo() {
         return Boolean(this.comboParent || this.comboLines?.length);
     }
+    getComboTotalPrice() {
+        const allLines = this.getAllLinesInCombo();
+        return allLines.reduce((total, line) => total + line.get_all_prices(1).priceWithTax, 0);
+    }
+    getComboTotalPriceWithoutTax() {
+        const allLines = this.getAllLinesInCombo();
+        return allLines.reduce((total, line) => total + line.get_all_prices(1).priceWithoutTax, 0);
+    }
     findAttribute(values, customAttributes) {
         const listOfAttributes = [];
         const addedPtal_id = [];
@@ -1421,7 +1429,9 @@ export class Order extends PosModel {
             this.init_from_JSON(options.json);
             const linesById = Object.fromEntries(this.orderlines.map((l) => [l.id || l.cid, l]));
             for (const line of this.orderlines) {
-                line.comboLines = line.combo_line_ids?.map((id) => linesById[id]);
+                line.comboLines = line.combo_line_ids
+                    ?.filter((id) => linesById[id])
+                    .map((id) => linesById[id]); 
                 const combo_parent_id = line.combo_parent_id?.[0] || line.combo_parent_id;
                 if (combo_parent_id) {
                     line.comboParent = linesById[combo_parent_id];

@@ -1674,7 +1674,7 @@ export function isUnbreakable(node) {
 
 export function isUnremovable(node) {
     return (
-        (node.nodeType !== Node.ELEMENT_NODE && node.nodeType !== Node.TEXT_NODE) ||
+        (node.nodeType !== Node.COMMENT_NODE && node.nodeType !== Node.ELEMENT_NODE && node.nodeType !== Node.TEXT_NODE) ||
         node.oid === 'root' ||
         (node.nodeType === Node.ELEMENT_NODE &&
             (node.classList.contains('o_editable') || node.getAttribute('t-set') || node.getAttribute('t-call'))) ||
@@ -3204,11 +3204,12 @@ export function getRangePosition(el, document, options = {}) {
         offset.left = marginLeft;
     }
 
-    if (options.parentContextRect) {
-        offset.left += options.parentContextRect.left;
-        offset.top += options.parentContextRect.top;
+    if (options.getContextFromParentRect) {
+        const parentContextRect = options.getContextFromParentRect();
+        offset.left += parentContextRect.left;
+        offset.top += parentContextRect.top;
         if (isRtl) {
-            offset.right += options.parentContextRect.left;
+            offset.right += parentContextRect.left;
         }
     }
 
