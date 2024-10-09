@@ -13,6 +13,7 @@ class HospitalAppointment(models.Model):
     status = fields.Selection([('draft', 'Draft'), ('confirmed', 'Confirmed'),
                                ('ongoing', 'Ongoing'), ('done', 'Done'), 
                                ('cancelled','Cancelled')], default='draft', tracking=True)
+    appointment_line_ids = fields.One2many('hospital.appointment.line', 'appointment_id', string='Lines')
     
     @api.model_create_multi
     def create(self, vals_list):
@@ -33,3 +34,12 @@ class HospitalAppointment(models.Model):
     def action_cancelled(self):
         for rec in self:
             rec.status ='cancelled'
+            
+class HospitalAppointmentLine(models.Model):
+    _name ='hospital.appointment.line'
+    _description = 'Hospital Appointment Line'
+    
+    appointment_id = fields.Many2one('hospital.appointment', string="Appointment")
+    product_id = fields.Many2one('product.product', string="Product")
+    qty = fields.Float(string="Quantity")
+    
